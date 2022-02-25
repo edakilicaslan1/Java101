@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Baslangic {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int mat, tarih, turkce, muzik, fizik, kimya ;
+
+        System.out.print("Matematik notunuzu giriniz: ");
+        mat = input.nextInt();
+        System.out.print("Tarih notunuzu giriniz: ");
+        tarih = input.nextInt();
+        System.out.print("Turkce notunuzu giriniz: ");
+        turkce = input.nextInt();
+        System.out.print("Müzik notunuzu giriniz: ");
+        muzik = input.nextInt();
+        System.out.print("Fizik notunuzu giriniz: ");
+        fizik = input.nextInt();
+        System.out.print("Kimya notunuzu giriniz: ");
+        kimya = input.nextInt();
+
+        int toplam = mat + tarih + turkce + muzik + fizik + kimya;
+        double ortalama = toplam / 6;
+        System.out.print("Ortalamanız : " + ortalama);
+        String gectiKaldi = (ortalama > 60 ) ? " Geçti " : " Kaldı ";
+        System.out.print(gectiKaldi);
+
+
+    }
+
+}
