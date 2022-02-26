@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Baslangic {
+    public static void main(String[] args) {
+        int r,merkezaciolcusu;
+        double pi = 3.14;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Yarıçapı giriniz:  ");
+        r = input.nextInt();
+        System.out.print("Merkezi açı ölçüsünü giriniz:  ");
+        merkezaciolcusu = input.nextInt();
+
+        double alan = (pi*(r*r)*merkezaciolcusu)/360;
+        System.out.print("Daire diliminin alanı  " + alan);
+
+
+
+
+
+
+
+    }
+
+}
