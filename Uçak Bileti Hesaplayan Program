@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Baslangic {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int distanceKm, age , travelType;
+        double price,perKm = 0.10;
+        System.out.print("Yolculuk mesafenizi km cinsinden yazınız: ");
+        distanceKm = input.nextInt();
+        System.out.print("Yaşınızı yazınız: ");
+        age = input.nextInt();
+        System.out.print("Yolculuk tipini yazınız. 1 -> Tek Yön, 2 -> Gidiş Dönüş: ");
+        travelType = input.nextInt();
+
+        if ((distanceKm < 0) && (travelType != 1 && travelType != 2)){
+            System.out.print("Hatalı Veri Girdiniz. ");
+        }
+
+         price = distanceKm * perKm ;
+
+        if (age < 12){
+            price -= price * 0.5;
+        }else if (age >= 12 && age <= 24){
+            price -= price * 0.1;
+        } if (age > 65){
+            price -= price * 0.3;
+        }
+        if (travelType == 2) {
+            price -= price * 0.2;
+            price *= 2;
+            System.out.print("Toplam Tutar: " + price);
+        }else if ( travelType == 1) {
+            System.out.print("Toplam Tutar: " + price);
+        }
+        }
+        }
+
+
