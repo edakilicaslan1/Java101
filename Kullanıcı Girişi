@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Baslangic {
+    public static void main(String[] args) {
+    String userName, password, newPassword;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Kullanıcı adınızı giriniz: ");
+    userName = input.nextLine();
+    System.out.print("Şifrenizi giriniz: ");
+    password = input.nextLine();
+
+    if (userName.equals("patika") && password.equals("java123")) {
+        System.out.print("Giriş yaptınız. ");
+    }else {
+        System.out.print("Hatalı giriş yaptınız. Şifre sıfırlamak istermisiniz");
+        System.out.print(" 0 : Hayır , 1 : Evet ");
+        int onay = input.nextInt();
+        if (onay == 1 ){
+            System.out.print("Yeni şifrenizi giriniz: ");
+            Scanner inp = new Scanner(System.in);
+            newPassword = inp.nextLine();
+            if (newPassword.equals("java")){
+                System.out.print("Şifre değiştirilemedi. Yeni şifre giriniz.");
+
+            }else{
+                System.out.print("Şifre değiştirildi.");
+            }
+
+        }
+    }
+
+
+
+    }
+
+}
