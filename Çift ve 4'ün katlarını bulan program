@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Baslangic {
+    public static void main(String[] args) {
+        int k, topla = 0;
+        Scanner input = new Scanner(System.in);
+
+        do {
+            System.out.print("k sayısı giriniz:  ");
+            k = input.nextInt();
+            if (k % 2 == 0 && k % 4 == 0) {
+                topla += k;
+            }
+        }while (k % 2 == 1) ;
+
+        System.out.print("Toplam: " + topla);
+
+
+
+    }
+}
+
+
