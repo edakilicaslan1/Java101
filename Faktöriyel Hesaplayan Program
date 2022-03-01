@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Baslangic {
+    public static void main(String[] args) {
+        int n, r;
+        int faktoriyeln = 1, faktoriyelr = 1, faktoriyelz = 1 ;
+        Scanner input = new Scanner(System.in);
+        System.out.print("n sayısını giriniz: ");
+        n = input.nextInt();
+        System.out.print("r sayısını giriniz: ");
+        r = input.nextInt();
+        for (int i = 1; i <= n; i++){
+            faktoriyeln =  faktoriyeln * i;
+        }
+        for (int j = 1; j <= r ; j++){
+            faktoriyelr = faktoriyelr * j;
+        }
+        for (int k = 1; k <= n - r ; k++){
+            faktoriyelz = faktoriyelz * k;
+
+        }
+        int sonuc = (faktoriyeln) / (faktoriyelr * faktoriyelz);
+            System.out.print("Kombinasyon sonucu: " + sonuc);
+    }
+}
+
+
