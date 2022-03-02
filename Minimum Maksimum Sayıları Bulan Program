@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Baslangic {
+    public static void main(String[] args) {
+        int min = 0, max = 0, sayi, kacSayiGirilecek ;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Eleman sayısı: ");
+        kacSayiGirilecek = input.nextInt();
+
+        for(int i = 1; i <= kacSayiGirilecek; i++){
+            System.out.print(i + ". sayıyı giriniz: ");
+            sayi = input.nextInt();
+            if(i == 1){
+                min = sayi;
+                max = sayi;
+            }else {
+                if (sayi > max){
+                    max = sayi;
+                }
+                if (sayi < min){
+                    min = sayi;
+                }
+            }
+        }
+        System.out.println("En Büyük Sayı: " + max);
+        System.out.println("En Küçük Sayı: " + min);
+
+    }
+}
+
+
