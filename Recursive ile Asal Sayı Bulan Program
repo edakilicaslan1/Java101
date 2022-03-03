@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Baslangic {
+    static boolean asalSayi(){
+        Scanner input = new Scanner(System.in);
+        int number;
+        boolean result = false;
+        System.out.print("Sayı giriniz: ");
+        number = input.nextInt();
+        for(int i = 2; i <= number; i++){
+            result = true;
+        for(int j = 2; j <= i/2; j++){
+            if(i%j == 0){
+                result = false;
+            }
+        }
+        }
+        return result;
+
+    }
+    public static void main(String[] args){
+        System.out.println(asalSayi());
+    }
+}
