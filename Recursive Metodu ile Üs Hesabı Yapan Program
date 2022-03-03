@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Baslangic {
+    static int UsluSayiHesaplama(int n1, int n2) {
+        if (n2 == 0) {
+            return 1;
+        }
+        return n1 * UsluSayiHesaplama(n1, n2 - 1);
+    }
+    public static void main(String[] args) {
+            int n1, n2;
+            Scanner input = new Scanner(System.in);
+            System.out.print("Taban değerini giriniz: ");
+            n1 = input.nextInt();
+            System.out.print("Üs değerini giriniz:  ");
+            n2 = input.nextInt();
+            System.out.print("Sonuç: " + UsluSayiHesaplama(n1,n2));
+        }
+
+    }
